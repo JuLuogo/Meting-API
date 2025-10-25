@@ -83,6 +83,8 @@ npm i
 
 ### Cloudflare Workers
 
+注意：需要 Node 20+ 开发与构建（CI 已固定为 Node 20）。
+
 已内置 Cloudflare Workers 构建与配置，按以下步骤使用：
 
 1. 安装依赖：`npm i`；安装 Wrangler：`npm i -D wrangler`
