@@ -93,11 +93,15 @@ npm i
 4. 发布到 Cloudflare：`npm run deploy:cf`
 
 wrangler.toml 关键字段：
-- `main = "dist/cloudflare-workers.js"`
+- `main = "app.js"`（Wrangler v4 将自动打包）
 - `compatibility_flags = ["nodejs_compat"]`
 - 运行时会自动识别为 `cloudflare`，并将 `OVERSEAS` 置为 true，无需手动设置。
 
 如需绑定域名，可在 `wrangler.toml` 中取消注释 `routes` 并按需配置。
+
+可选：关闭 Wrangler 遥测
+- 项目级：在 `wrangler.toml` 添加 `send_metrics=false`
+- 或者：执行 `npx wrangler telemetry disable`
 
 
 ### Docker部署

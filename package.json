@@ -8,8 +8,8 @@
     "build:cf": "node esbuild.config.js",
     "start:node": "node node.js",
     "start:deno": "deno run --allow-net --allow-env dist/deno.js",
-    "dev:cf": "npm run build:all && wrangler dev --port 8787",
-    "deploy:cf": "npm run build:all && wrangler publish",
+    "dev:cf": "npx wrangler dev --port 8787",
+    "deploy:cf": "npx wrangler deploy",
     "test": "vitest run",
     "patch": "npm version patch && git push origin main && git push origin --tags",
     "minor": "npm version minor && git push origin main && git push origin --tags",
@@ -25,7 +25,7 @@
     "esbuild-plugin-resolve": "^1.0.3",
     "esbuild-plugin-text-replace": "^1.2.0",
     "vitest": "^0.29.2",
-    "wrangler": "^3.77.0"
+    "wrangler": "^4.45.0"
   },
   "dependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
