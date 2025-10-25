@@ -1,0 +1,13 @@
+name = "meting-api"
+main = "dist/cloudflare-workers.js"
+compatibility_date = "2024-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Uncomment and configure to bind to your domain/zone
+# routes = [
+#   { pattern = "example.com/*", zone_name = "example.com" }
+# ]
+
+[vars]
+# Runtime auto-sets OVERSEAS for Cloudflare; keep empty unless you need to override.
+# OVERSEAS = "1"

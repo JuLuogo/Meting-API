@@ -81,6 +81,23 @@ npm i
 
 </details>
 
+### Cloudflare Workers
+
+已内置 Cloudflare Workers 构建与配置，按以下步骤使用：
+
+1. 安装依赖：`npm i`；安装 Wrangler：`npm i -D wrangler`
+2. 构建 Workers 包：`npm run build:all`（生成 `dist/cloudflare-workers.js`）
+3. 本地调试：`npm run dev:cf`，默认监听 `http://127.0.0.1:8787/`
+4. 发布到 Cloudflare：`npm run deploy:cf`
+
+wrangler.toml 关键字段：
+- `main = "dist/cloudflare-workers.js"`
+- `compatibility_flags = ["nodejs_compat"]`
+- 运行时会自动识别为 `cloudflare`，并将 `OVERSEAS` 置为 true，无需手动设置。
+
+如需绑定域名，可在 `wrangler.toml` 中取消注释 `routes` 并按需配置。
+
+
 ### Docker部署
 
 运行下面的命令下载 Meting-API 镜像
